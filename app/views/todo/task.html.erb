@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task List</title>
+</head>
+
+<body>
+
+<% @todo.each do |task| %>
++ <%= task %> <br />
+
+<% end %>
+
+
+<%= button_to "Add Task",
+	 { :controller => "todo", :action => :add_task, :page => @current_page }, 
+	 { :remote => true, :id => 'lnk_more' }
+ %> 
+
+
+</body>
+</html>
